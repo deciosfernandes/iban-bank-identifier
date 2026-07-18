@@ -12,6 +12,7 @@
   "0045": { "name": "Crédito Agrícola (Caixa Central)", "bic": "CCCMPTPL" },
   "0046": { "name": "Banco Português de Investimento", "bic": "BPIPPTPL" },
   "0048": { "name": "Banco Finantia", "bic": "BFIAPTPL" },
+  "0059": { "name": "CEMAH - Caixa Económica da Misericórdia de Angra do Heroísmo", "bic": "CEMAPTP2" },
   "0060": { "name": "Banco BAI Europa", "bic": "BESZPTPL" },
   "0061": { "name": "Banco Credibom", "bic": "CREDPTPL" },
   "0065": { "name": "Banco BEST", "bic": "FBESPTPL" },
