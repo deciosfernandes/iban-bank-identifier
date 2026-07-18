@@ -1,6 +1,6 @@
 {
   "name": "iban-bank-identifier",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Identifica o banco a partir de um IBAN, usando bases de dados JSON incorporadas (PT, ES, FR, IT, NL, DE). Inclui validação mod-97. Sem chamadas de rede. ESM + CommonJS, pronto para Node e browser (React, Angular, Vite, webpack).",
   "type": "module",
   "main": "./dist/index.cjs",
