@@ -71,11 +71,14 @@ export function IbanChecker() {
 
 ```ts
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { identifyBank, type IdentifyResult } from 'iban-bank-identifier';
 
 @Component({
   selector: 'app-iban-checker',
   standalone: true,
+  imports: [CommonModule, FormsModule],
   template: `
     <input [(ngModel)]="iban" (ngModelChange)="check()" placeholder="IBAN" />
     <p *ngIf="result">{{ result.valid ? (result.bank?.name ?? 'Banco desconhecido') : result.error }}</p>
