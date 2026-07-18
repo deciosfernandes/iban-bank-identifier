@@ -1,0 +1,58 @@
+{
+  "10010010": {
+    "name": "Postbank (Berlin)",
+    "bic": "PBNKDEFF"
+  },
+  "10011001": {
+    "name": "N26 Bank",
+    "bic": "NTSBDEB1"
+  },
+  "10040000": {
+    "name": "Commerzbank (Berlin)",
+    "bic": "COBADEBB"
+  },
+  "10050000": {
+    "name": "Landesbank Berlin / Berliner Sparkasse",
+    "bic": "BELADEBE"
+  },
+  "10070000": {
+    "name": "Deutsche Bank (Berlin)",
+    "bic": "DEUTDEBB"
+  },
+  "12030000": {
+    "name": "Deutsche Kreditbank (DKB)",
+    "bic": "BYLADEM1001"
+  },
+  "20041111": {
+    "name": "comdirect bank",
+    "bic": "COBADEHD044"
+  },
+  "30060601": {
+    "name": "Deutsche Apotheker- und Arztebank (apoBank)",
+    "bic": "DAAEDEDD"
+  },
+  "37040044": {
+    "name": "Commerzbank (Koln)",
+    "bic": "COBADEFFXXX"
+  },
+  "50010517": {
+    "name": "ING (ING-DiBa)",
+    "bic": "INGDDEFFXXX"
+  },
+  "50040000": {
+    "name": "Commerzbank (Frankfurt)",
+    "bic": "COBADEFF"
+  },
+  "50070010": {
+    "name": "Deutsche Bank (Frankfurt)",
+    "bic": "DEUTDEFF"
+  },
+  "60050101": {
+    "name": "Landesbank Baden-Wurttemberg (LBBW)",
+    "bic": "SOLADEST600"
+  },
+  "70020270": {
+    "name": "UniCredit Bank (HypoVereinsbank)",
+    "bic": "HYVEDEMM"
+  }
+}

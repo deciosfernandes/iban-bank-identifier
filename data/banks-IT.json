@@ -1,0 +1,70 @@
+{
+  "01005": {
+    "name": "Banca Nazionale del Lavoro (BNL)",
+    "bic": "BNLIITRR"
+  },
+  "01030": {
+    "name": "Banca Monte dei Paschi di Siena",
+    "bic": "PASCITM1"
+  },
+  "02008": {
+    "name": "UniCredit",
+    "bic": "UNCRITMM"
+  },
+  "03015": {
+    "name": "FinecoBank",
+    "bic": "FEBIITM1"
+  },
+  "03032": {
+    "name": "Credito Emiliano (Credem)",
+    "bic": "BACRIT21"
+  },
+  "03069": {
+    "name": "Intesa Sanpaolo",
+    "bic": "BCITITMM"
+  },
+  "03104": {
+    "name": "Fideuram - Intesa Sanpaolo Private Banking",
+    "bic": "FIBKITMM"
+  },
+  "03124": {
+    "name": "Deutsche Bank (Italia)",
+    "bic": "DEUTITMM"
+  },
+  "03268": {
+    "name": "Banca Sella",
+    "bic": "SELBIT2B"
+  },
+  "03332": {
+    "name": "Banca Passadore & C.",
+    "bic": "PASBITGG"
+  },
+  "05034": {
+    "name": "Banco BPM",
+    "bic": "BAPPIT21"
+  },
+  "05387": {
+    "name": "BPER Banca",
+    "bic": "BPMOIT22"
+  },
+  "05856": {
+    "name": "Banca Popolare dell Alto Adige (Volksbank)",
+    "bic": "BPAAIT2B"
+  },
+  "06230": {
+    "name": "Credit Agricole Italia",
+    "bic": "CRPPIT2P"
+  },
+  "06385": {
+    "name": "Banca Popolare di Sondrio",
+    "bic": "POSOIT22"
+  },
+  "07601": {
+    "name": "Poste Italiane (BancoPosta)",
+    "bic": "BPPIITRR"
+  },
+  "08000": {
+    "name": "Iccrea Banca (Credito Cooperativo)",
+    "bic": "ICRAITRR"
+  }
+}

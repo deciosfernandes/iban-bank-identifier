@@ -1,0 +1,186 @@
+{
+  "1465": {
+    "name": "ING Bank (Sucursal en España)",
+    "bic": "INGDESMM"
+  },
+  "1474": {
+    "name": "Citibank Europe",
+    "bic": "CITIES2X"
+  },
+  "1491": {
+    "name": "Triodos Bank",
+    "bic": "TRIOESMM"
+  },
+  "1550": {
+    "name": "Banca Popolare Etica",
+    "bic": null
+  },
+  "2000": {
+    "name": "Cecabank",
+    "bic": "CECAESMM"
+  },
+  "2038": {
+    "name": "Bankia (integrado em CaixaBank)",
+    "bic": "CAHMESMM"
+  },
+  "2045": {
+    "name": "Caixa Ontinyent",
+    "bic": null
+  },
+  "2048": {
+    "name": "Liberbank",
+    "bic": null
+  },
+  "2056": {
+    "name": "Colonya Caixa Pollença",
+    "bic": null
+  },
+  "2080": {
+    "name": "Abanca",
+    "bic": "CAGLESMM"
+  },
+  "2085": {
+    "name": "Ibercaja Banco",
+    "bic": "CAZRES2Z"
+  },
+  "2095": {
+    "name": "Kutxabank",
+    "bic": "BASKES2B"
+  },
+  "2100": {
+    "name": "CaixaBank",
+    "bic": "CAIXESBB"
+  },
+  "2103": {
+    "name": "Unicaja Banco",
+    "bic": "UCJAES2M"
+  },
+  "3025": {
+    "name": "Caixa de Crèdit dels Enginyers (Caja de Ingenieros)",
+    "bic": null
+  },
+  "3035": {
+    "name": "Caja Laboral (Laboral Kutxa)",
+    "bic": null
+  },
+  "3058": {
+    "name": "Cajamar Caja Rural",
+    "bic": null
+  },
+  "3081": {
+    "name": "Caja Rural de Castilla-La Mancha",
+    "bic": null
+  },
+  "3821": {
+    "name": "Commerzbank",
+    "bic": "COBAESMX"
+  },
+  "3842": {
+    "name": "BNP Paribas (Paris, sucursal)",
+    "bic": "BNPAESMM"
+  },
+  "3877": {
+    "name": "Danske Bank",
+    "bic": "DABAESMM"
+  },
+  "0019": {
+    "name": "Deutsche Bank S.A.E.",
+    "bic": "DEUTESBB"
+  },
+  "0030": {
+    "name": "Banco Español de Crédito (Banesto)",
+    "bic": "ESPCESMM"
+  },
+  "0046": {
+    "name": "Banco Gallego",
+    "bic": "GALLESMM"
+  },
+  "0049": {
+    "name": "Banco Santander",
+    "bic": "BSCHESMM"
+  },
+  "0061": {
+    "name": "Banca March",
+    "bic": "BMARES2M"
+  },
+  "0073": {
+    "name": "Openbank",
+    "bic": "OPENESMM"
+  },
+  "0075": {
+    "name": "Banco Popular Español",
+    "bic": "POPUESMM"
+  },
+  "0078": {
+    "name": "Banca Pueyo",
+    "bic": "BAPUES22"
+  },
+  "0081": {
+    "name": "Banco de Sabadell",
+    "bic": "BSABESBB"
+  },
+  "0108": {
+    "name": "Société Générale (Sucursal en España)",
+    "bic": "SOGEESMM"
+  },
+  "0128": {
+    "name": "Bankinter",
+    "bic": "BKBKESMM"
+  },
+  "0131": {
+    "name": "Novo Banco (Sucursal España)",
+    "bic": "BLABESMM"
+  },
+  "0133": {
+    "name": "Nuevo Micro Bank (MicroBank)",
+    "bic": null
+  },
+  "0138": {
+    "name": "Bankoa",
+    "bic": "BKOAES22"
+  },
+  "0152": {
+    "name": "Barclays Bank",
+    "bic": "BARCESMM"
+  },
+  "0182": {
+    "name": "BBVA (Banco Bilbao Vizcaya Argentaria)",
+    "bic": "BBVAESMM"
+  },
+  "0186": {
+    "name": "Banco Mediolanum",
+    "bic": null
+  },
+  "0198": {
+    "name": "Banco Cooperativo Español",
+    "bic": null
+  },
+  "0216": {
+    "name": "Targobank",
+    "bic": null
+  },
+  "0234": {
+    "name": "Banco Caminos",
+    "bic": null
+  },
+  "0235": {
+    "name": "Banco Pichincha España",
+    "bic": null
+  },
+  "0237": {
+    "name": "Cajasur Banco",
+    "bic": "CSURES2C"
+  },
+  "0238": {
+    "name": "Banco Pastor",
+    "bic": "PASTESMM"
+  },
+  "0239": {
+    "name": "EVO Banco",
+    "bic": "EVOBESMM"
+  },
+  "0487": {
+    "name": "Banco Mare Nostrum (BMN)",
+    "bic": "GBMNESMM"
+  }
+}

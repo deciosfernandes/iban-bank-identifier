@@ -1,0 +1,15 @@
+{
+  "30001": { "name": "Banque de France", "bic": "BDFEFRPP" },
+  "30002": { "name": "LCL (Crédit Lyonnais)", "bic": "CRLYFRPP" },
+  "30003": { "name": "Société Générale", "bic": "SOGEFRPP" },
+  "30004": { "name": "BNP Paribas", "bic": "BNPAFRPP" },
+  "30006": { "name": "Crédit Agricole S.A.", "bic": "AGRIFRPP" },
+  "30056": { "name": "HSBC Continental Europe (France)", "bic": "CCFRFRPP" },
+  "30066": { "name": "CIC (Crédit Industriel et Commercial)", "bic": "CMCIFRPP" },
+  "30076": { "name": "Crédit du Nord", "bic": "NORDFRPP" },
+  "10278": { "name": "Crédit Mutuel (Caisse Fédérale CMCEE)", "bic": "CMCIFR2A" },
+  "10907": { "name": "BPCE (Banque Populaire / Caisse d'Épargne)", "bic": "CEPAFRPP" },
+  "15589": { "name": "CIC (réseau)", "bic": "CMCIFRPP" },
+  "17806": { "name": "Crédit Coopératif", "bic": "CCOPFRPP" },
+  "20041": { "name": "La Banque Postale", "bic": "PSSTFRPP" }
+}

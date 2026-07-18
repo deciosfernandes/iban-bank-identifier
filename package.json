@@ -1,0 +1,45 @@
+{
+  "name": "iban-bank-identifier",
+  "version": "1.1.0",
+  "description": "Identifica o banco a partir de um IBAN, usando bases de dados JSON incorporadas (PT, ES, FR, IT, NL, DE). Inclui validação mod-97. Sem chamadas de rede.",
+  "main": "src/index.js",
+  "types": "src/index.d.ts",
+  "scripts": {
+    "test": "node test/index.test.js",
+    "prepublishOnly": "npm test"
+  },
+  "files": [
+    "src/",
+    "data/"
+  ],
+  "keywords": [
+    "iban",
+    "banco",
+    "bank",
+    "nib",
+    "bic",
+    "swift",
+    "portugal",
+    "spain",
+    "france",
+    "italy",
+    "netherlands",
+    "germany",
+    "sepa",
+    "validation",
+    "mod97"
+  ],
+  "author": "deciosfernandes <deciosfernandes@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deciosfernandes/iban-bank-identifier.git"
+  },
+  "bugs": {
+    "url": "https://github.com/deciosfernandes/iban-bank-identifier/issues"
+  },
+  "homepage": "https://github.com/deciosfernandes/iban-bank-identifier#readme",
+  "engines": {
+    "node": ">=14"
+  }
+}

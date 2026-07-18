@@ -1,0 +1,18 @@
+{
+  "AD": { "length": 24, "bankStart": 4, "bankEnd": 8 },
+  "AT": { "length": 20, "bankStart": 4, "bankEnd": 9 },
+  "BE": { "length": 16, "bankStart": 4, "bankEnd": 7 },
+  "CH": { "length": 21, "bankStart": 4, "bankEnd": 9 },
+  "DE": { "length": 22, "bankStart": 4, "bankEnd": 12 },
+  "ES": { "length": 24, "bankStart": 4, "bankEnd": 8 },
+  "FI": { "length": 18, "bankStart": 4, "bankEnd": 7 },
+  "FR": { "length": 27, "bankStart": 4, "bankEnd": 9 },
+  "GB": { "length": 22, "bankStart": 4, "bankEnd": 8 },
+  "IE": { "length": 22, "bankStart": 4, "bankEnd": 8 },
+  "IT": { "length": 27, "bankStart": 5, "bankEnd": 10 },
+  "LU": { "length": 20, "bankStart": 4, "bankEnd": 7 },
+  "NL": { "length": 18, "bankStart": 4, "bankEnd": 8 },
+  "PL": { "length": 28, "bankStart": 4, "bankEnd": 12 },
+  "PT": { "length": 25, "bankStart": 4, "bankEnd": 8 },
+  "SE": { "length": 24, "bankStart": 4, "bankEnd": 7 }
+}
