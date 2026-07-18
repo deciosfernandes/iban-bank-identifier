@@ -1,32 +1,30 @@
-'use strict';
+import structure from '../data/iban-structure.json';
+import banksPT from '../data/banks-PT.json';
+import banksES from '../data/banks-ES.json';
+import banksFR from '../data/banks-FR.json';
+import banksIT from '../data/banks-IT.json';
+import banksNL from '../data/banks-NL.json';
+import banksDE from '../data/banks-DE.json';
 
-const fs = require('fs');
-const path = require('path');
-
-const structure = require('../data/iban-structure.json');
-
-// Cache de bases de dados de bancos por país, carregadas sob demanda.
-const bankDbCache = {};
+// Bases de dados de bancos por país, incorporadas em tempo de build.
+// (Substitui o carregamento sob demanda do código antigo.)
+const bankDbs = {
+  PT: banksPT,
+  ES: banksES,
+  FR: banksFR,
+  IT: banksIT,
+  NL: banksNL,
+  DE: banksDE,
+};
 
 function loadBankDb(country) {
-  if (bankDbCache[country] !== undefined) {
-    return bankDbCache[country];
-  }
-  const file = path.join(__dirname, '..', 'data', `banks-${country}.json`);
-  try {
-    const db = JSON.parse(fs.readFileSync(file, 'utf8'));
-    bankDbCache[country] = db;
-    return db;
-  } catch (e) {
-    bankDbCache[country] = null;
-    return null;
-  }
+  return bankDbs[country] ?? null;
 }
 
 /**
  * Normaliza um IBAN: remove espaços e passa a maiúsculas.
  */
-function normalizeIBAN(iban) {
+export function normalizeIBAN(iban) {
   if (typeof iban !== 'string') {
     throw new TypeError('O IBAN tem de ser uma string.');
   }
@@ -37,7 +35,7 @@ function normalizeIBAN(iban) {
  * Valida um IBAN segundo o algoritmo mod-97 (ISO 13616 / ISO 7064).
  * Verifica também o comprimento esperado para o país, quando conhecido.
  */
-function isValidIBAN(iban) {
+export function isValidIBAN(iban) {
   const clean = normalizeIBAN(iban);
 
   if (!/^[A-Z]{2}\d{2}[A-Z0-9]+$/.test(clean)) {
@@ -69,7 +67,7 @@ function isValidIBAN(iban) {
 /**
  * Extrai o código do banco de um IBAN, com base na estrutura do país.
  */
-function extractBankCode(iban) {
+export function extractBankCode(iban) {
   const clean = normalizeIBAN(iban);
   const country = clean.slice(0, 2);
   const spec = structure[country];
@@ -88,7 +86,7 @@ function extractBankCode(iban) {
  * @returns {{ valid: boolean, country: string, bankCode: string|null,
  *             bank: object|null, error: string|null }}
  */
-function identifyBank(iban, options = {}) {
+export function identifyBank(iban, options = {}) {
   const { validate = true } = options;
   const result = {
     valid: false,
@@ -141,7 +139,7 @@ function identifyBank(iban, options = {}) {
 /**
  * Lista os países suportados para extração do código do banco.
  */
-function supportedCountries() {
+export function supportedCountries() {
   return Object.keys(structure);
 }
 
@@ -149,16 +147,11 @@ function supportedCountries() {
  * Lista os países que têm base de dados de bancos incorporada
  * (ou seja, para os quais é possível resolver o nome do banco).
  */
-function supportedBankCountries() {
-  const dir = path.join(__dirname, '..', 'data');
-  return fs
-    .readdirSync(dir)
-    .filter((f) => /^banks-[A-Z]{2}\.json$/.test(f))
-    .map((f) => f.slice(6, 8))
-    .sort();
+export function supportedBankCountries() {
+  return Object.keys(bankDbs).sort();
 }
 
-module.exports = {
+export default {
   identifyBank,
   isValidIBAN,
   extractBankCode,
