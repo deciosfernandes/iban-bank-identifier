@@ -1,16 +1,26 @@
 {
   "name": "iban-bank-identifier",
-  "version": "1.1.0",
-  "description": "Identifica o banco a partir de um IBAN, usando bases de dados JSON incorporadas (PT, ES, FR, IT, NL, DE). Inclui validação mod-97. Sem chamadas de rede.",
-  "main": "src/index.js",
-  "types": "src/index.d.ts",
+  "version": "2.0.0",
+  "description": "Identifica o banco a partir de um IBAN, usando bases de dados JSON incorporadas (PT, ES, FR, IT, NL, DE). Inclui validação mod-97. Sem chamadas de rede. ESM + CommonJS, pronto para Node e browser (React, Angular, Vite, webpack).",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "sideEffects": false,
   "scripts": {
-    "test": "node test/index.test.js",
+    "build": "tsup src/index.js --format esm,cjs --clean && node -e \"const fs=require('fs'); fs.copyFileSync('src/index.d.ts','dist/index.d.ts'); fs.renameSync('dist/index.js','dist/index.mjs');\"",
+    "test": "npm run build && node test/index.test.js",
     "prepublishOnly": "npm test"
   },
   "files": [
-    "src/",
-    "data/"
+    "dist/"
   ],
   "keywords": [
     "iban",
@@ -27,7 +37,11 @@
     "germany",
     "sepa",
     "validation",
-    "mod97"
+    "mod97",
+    "esm",
+    "browser",
+    "react",
+    "angular"
   ],
   "author": "deciosfernandes <deciosfernandes@gmail.com>",
   "license": "MIT",
@@ -40,6 +54,10 @@
   },
   "homepage": "https://github.com/deciosfernandes/iban-bank-identifier#readme",
   "engines": {
-    "node": ">=14"
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "tsup": "^8",
+    "typescript": "^5"
   }
 }
