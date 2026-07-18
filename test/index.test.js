@@ -1,18 +1,17 @@
-'use strict';
-
-// Testes sem framework: correm com `node test/index.test.js` (ver package.json).
+// Testes sem framework: correm com `npm test` (que faz build e depois `node test/index.test.js`).
 // Cada `assert` falha lança e faz o Node sair com código != 0, o que chega para o CI.
+// Importa-se o artefacto construído (dist/index.mjs) — é o que os utilizadores recebem.
 
-const assert = require('assert');
+import assert from 'node:assert';
 
-const {
+import {
   identifyBank,
   isValidIBAN,
   extractBankCode,
   normalizeIBAN,
   supportedCountries,
   supportedBankCountries,
-} = require('../src');
+} from '../dist/index.mjs';
 
 let passed = 0;
 function test(name, fn) {

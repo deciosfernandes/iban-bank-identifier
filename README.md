@@ -23,24 +23,75 @@ Para qualquer outro país da UE, o pacote continua a **validar** o IBAN e a **ex
 npm install iban-bank-identifier
 ```
 
-## Utilização
+## Uso
+
+Funciona em Node (ESM e CommonJS) e em bundlers de browser (React, Angular, Vite, webpack) — sem configuração extra e sem chamadas de rede.
+
+### ESM (recomendado)
 
 ```js
-const { identifyBank, isValidIBAN } = require('iban-bank-identifier');
+import { identifyBank, isValidIBAN } from 'iban-bank-identifier';
 
-identifyBank('PT49 0035 0000 0000 1234 5670 0');
-// { valid: true, country: 'PT', bankCode: '0035',
-//   bank: { name: 'Caixa Geral de Depósitos', bic: 'CGDIPTPL' }, error: null }
+console.log(isValidIBAN('PT50000201231234567890154')); // true
+console.log(identifyBank('ES9121000418450200051332').bank);
+// { name: 'CaixaBank', bic: 'CAIXESBB' }
+```
 
-identifyBank('NL91 ABNA 0417 1643 00');
-// { valid: true, country: 'NL', bankCode: 'ABNA',
-//   bank: { name: 'ABN AMRO Bank', bic: 'ABNANL2A' }, error: null }
+### CommonJS
 
-identifyBank('ES91 2100 0418 4502 0005 1332');
-// { valid: true, country: 'ES', bankCode: '2100',
-//   bank: { name: 'CaixaBank', bic: 'CAIXESBB' }, error: null }
+```js
+const { identifyBank } = require('iban-bank-identifier');
 
-isValidIBAN('DE89370400440532013000'); // true
+console.log(identifyBank('NL91ABNA0417164300').bank);
+// { name: 'ABN AMRO Bank', bic: 'ABNANL2A' }
+```
+
+### React
+
+```jsx
+import { useState } from 'react';
+import { identifyBank } from 'iban-bank-identifier';
+
+export function IbanChecker() {
+  const [iban, setIban] = useState('');
+  const result = iban ? identifyBank(iban) : null;
+
+  return (
+    <div>
+      <input value={iban} onChange={(e) => setIban(e.target.value)} placeholder="IBAN" />
+      {result && (
+        <p>{result.valid ? (result.bank?.name ?? 'Banco desconhecido') : result.error}</p>
+      )}
+    </div>
+  );
+}
+```
+
+### Angular
+
+```ts
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { identifyBank, type IdentifyResult } from 'iban-bank-identifier';
+
+@Component({
+  selector: 'app-iban-checker',
+  standalone: true,
+  imports: [CommonModule, FormsModule],
+  template: `
+    <input [(ngModel)]="iban" (ngModelChange)="check()" placeholder="IBAN" />
+    <p *ngIf="result">{{ result.valid ? (result.bank?.name ?? 'Banco desconhecido') : result.error }}</p>
+  `,
+})
+export class IbanCheckerComponent {
+  iban = '';
+  result: IdentifyResult | null = null;
+
+  check(): void {
+    this.result = this.iban ? identifyBank(this.iban) : null;
+  }
+}
 ```
 
 Espaços e minúsculas são normalizados internamente.
@@ -97,8 +148,13 @@ de um banco ou de um serviço de pagamentos em produção crítica.
 1. Confirmar/adicionar a estrutura do país em `data/iban-structure.json`
    (`length`, `bankStart`, `bankEnd`).
 2. Criar `data/banks-XX.json` com o mapa `código → { name, bic }`.
+3. Em `src/index.js`, adicionar `import banksXX from '../data/banks-XX.json';`
+   e a entrada `XX: banksXX` no objeto `bankDbs`.
+4. Reconstruir: `npm run build`.
 
-Não é preciso alterar código: os ficheiros são carregados sob demanda.
+Os dados são incorporados em tempo de build (para funcionarem no browser sem
+`fs`), por isso o passo 3 é obrigatório — um `data/banks-XX.json` que não seja
+importado é ignorado.
 
 ## Licença
 
