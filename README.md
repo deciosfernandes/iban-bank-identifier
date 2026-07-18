@@ -148,8 +148,13 @@ de um banco ou de um serviço de pagamentos em produção crítica.
 1. Confirmar/adicionar a estrutura do país em `data/iban-structure.json`
    (`length`, `bankStart`, `bankEnd`).
 2. Criar `data/banks-XX.json` com o mapa `código → { name, bic }`.
+3. Em `src/index.js`, adicionar `import banksXX from '../data/banks-XX.json';`
+   e a entrada `XX: banksXX` no objeto `bankDbs`.
+4. Reconstruir: `npm run build`.
 
-Não é preciso alterar código: os ficheiros são carregados sob demanda.
+Os dados são incorporados em tempo de build (para funcionarem no browser sem
+`fs`), por isso o passo 3 é obrigatório — um `data/banks-XX.json` que não seja
+importado é ignorado.
 
 ## Licença
 
